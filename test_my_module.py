@@ -1,4 +1,4 @@
-from my_module import plot_function, Chooser, solve_problem
+from my_module import plot_function, Chooser, solve_problem, square_number
 import numpy as np
 import pytest
 
@@ -25,3 +25,12 @@ def test_solve_problem():
     assert solve_problem([-1, -2, -3]) == -6, "solve_problem failed on negative numbers"
     assert solve_problem([10, -5, 5]) == 10, "solve_problem failed on mixed numbers"
 
+def test_square_number():
+    result = square_number(4)
+    assert result == 16, f"Expected 16, but got {result}"
+
+    result = square_number(0)
+    assert result == 0, f"Expected 0, but got {result}"
+
+    result = square_number(-3)
+    assert result == 9, f"Expected 9, but got {result}"

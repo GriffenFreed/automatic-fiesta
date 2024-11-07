@@ -20,3 +20,5 @@ class Chooser:
 
 def solve_problem(nums):
     return sum(nums)
+def square_number(x):
+  return x**2
